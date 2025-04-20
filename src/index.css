@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply bg-white text-gray-900 overflow-x-hidden;
+}
+a {
+  @apply no-underline text-inherit;
+}
+img {
+  @apply max-w-full;
+}
