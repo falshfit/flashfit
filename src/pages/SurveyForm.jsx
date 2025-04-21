@@ -11,7 +11,7 @@ const SurveyForm = () => {
     shopFor: [],
     deliveryApp: '',
     favoriteStore: '',
-    contact: ''
+    contact: '',
   });
 
   const handleChange = (e) => {
@@ -22,14 +22,14 @@ const SurveyForm = () => {
         ...prev,
         frequency: checked
           ? [...prev.frequency, value]
-          : prev.frequency.filter((item) => item !== value)
+          : prev.frequency.filter((item) => item !== value),
       }));
     } else if (type === 'checkbox' && name === 'shopFor') {
       setFormData((prev) => ({
         ...prev,
         shopFor: checked
           ? [...prev.shopFor, value]
-          : prev.shopFor.filter((item) => item !== value)
+          : prev.shopFor.filter((item) => item !== value),
       }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
@@ -37,10 +37,11 @@ const SurveyForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    console.log("handleSubmit triggered");
+    console.log('handleSubmit triggered');
     e.preventDefault();
 
-    console.log("formData: ", formData);    try {
+    console.log('formData: ', formData);
+    try {
       await addDoc(collection(db, 'surveyResponses'), formData);
       alert('Survey submitted successfully!');
       setFormData({
@@ -51,21 +52,29 @@ const SurveyForm = () => {
         shopFor: [],
         deliveryApp: '',
         favoriteStore: '',
-        contact: ''
+        contact: '',
       });
     } catch (error) {
-      console.error( error);
+      console.error(error);
       alert('Something went wrong. Please try again.');
     }
   };
 
   return (
     <div className="container mx-auto p-4">
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-8">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">FlashFit Survey Form</h2>
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-lg p-8"
+      >
+        <h2 className="text-2xl font-bold mb-6 text-gray-800">
+          FlashFit Survey Form
+        </h2>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="name"
+          >
             1. What is your name?
           </label>
           <input
@@ -80,9 +89,13 @@ const SurveyForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="instagram">
-            2. What's your Instagram handle? (optional)
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="instagram"
+          >
+            2. What&#39;s your Instagram handle? (optional)
           </label>
+
           <input
             type="text"
             name="instagram"
@@ -94,7 +107,10 @@ const SurveyForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="area">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="area"
+          >
             3. Which area of Hyderabad are you in?
           </label>
           <select
@@ -231,7 +247,10 @@ const SurveyForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="deliveryApp">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="deliveryApp"
+          >
             6. Would you use a 30-minute fashion delivery app?
           </label>
           <select
@@ -249,7 +268,10 @@ const SurveyForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="favoriteStore">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="favoriteStore"
+          >
             7. Any store or brand you would love to see on FlashFit? (optional)
           </label>
           <input
@@ -263,7 +285,10 @@ const SurveyForm = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contact">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="contact"
+          >
             8. Phone or Email for early access:
           </label>
           <input

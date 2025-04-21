@@ -9,9 +9,9 @@ function Header() {
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo and Brand Name */}
         <Link to="/" className="flex items-center space-x-2">
-          <img 
-            src="/images/logo_1.png" 
-            alt="FlashFit Logo" 
+          <img
+            src="/images/logo_1.png"
+            alt="FlashFit Logo"
             className="h-20 w-auto object-contain"
           />
           <span className="text-2xl font-bold text-[#f3423a]">
@@ -21,10 +21,18 @@ function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-[#f3423a]">Home</Link>
-          <a href="#features" className="hover:text-[#f3423a]">Features</a>
-          <a href="#how-it-works" className="hover:text-[#f3423a]">How It Works</a>
-          <Link to="/survey" className="hover:text-[#f3423a]">Survey</Link>
+          <Link to="/" className="hover:text-[#f3423a]">
+            Home
+          </Link>
+          <a href="#features" className="hover:text-[#f3423a]">
+            Features
+          </a>
+          <a href="#how-it-works" className="hover:text-[#f3423a]">
+            How It Works
+          </a>
+          <Link to="/survey" className="hover:text-[#f3423a]">
+            Survey
+          </Link>
         </nav>
 
         {/* Desktop Buttons */}

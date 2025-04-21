@@ -1,12 +1,36 @@
 import { motion } from 'framer-motion';
 
 const features = [
-  { icon: '⚡', title: '30-Minute Delivery', description: 'Get your fashion fix in just 30 minutes.' },
-  { icon: '👕', title: 'Try Before You Buy', description: 'Only pay for what you love after trying.' },
-  { icon: '🛍', title: 'Curated Collections', description: 'Trending styles selected just for you.' },
-  { icon: '↩', title: 'Hassle-Free Returns', description: 'Easy returns at your doorstep.' },
-  { icon: '🎁', title: 'Exclusive Offers', description: 'Special discounts and early access sales.' },
-  { icon: '🔒', title: 'Secure Payments', description: 'Fast and secure payment options.' },
+  {
+    icon: '⚡',
+    title: '30-Minute Delivery',
+    description: 'Get your fashion fix in just 30 minutes.',
+  },
+  {
+    icon: '👕',
+    title: 'Try Before You Buy',
+    description: 'Only pay for what you love after trying.',
+  },
+  {
+    icon: '🛍',
+    title: 'Curated Collections',
+    description: 'Trending styles selected just for you.',
+  },
+  {
+    icon: '↩',
+    title: 'Hassle-Free Returns',
+    description: 'Easy returns at your doorstep.',
+  },
+  {
+    icon: '🎁',
+    title: 'Exclusive Offers',
+    description: 'Special discounts and early access sales.',
+  },
+  {
+    icon: '🔒',
+    title: 'Secure Payments',
+    description: 'Fast and secure payment options.',
+  },
 ];
 
 function FeaturesSection() {
@@ -15,7 +39,10 @@ function FeaturesSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Why Choose FlashFit?</h2>
-          <p className="text-gray-600">Reimagining fashion delivery to make shopping faster, easier, and more convenient than ever before.</p>
+          <p className="text-gray-600">
+            Reimagining fashion delivery to make shopping faster, easier, and
+            more convenient than ever before.
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, idx) => (

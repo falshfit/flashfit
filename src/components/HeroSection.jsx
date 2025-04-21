@@ -13,10 +13,13 @@ function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl font-extrabold leading-tight mb-6">
-            Hyderabad's <span className="text-[#f3423a]">Fastest</span> Fashion Delivery
+            Hyderabad&#39;s <span className="text-[#f3423a]">Fastest</span>{' '}
+            Fashion Delivery
           </h1>
+
           <p className="text-gray-600 text-lg mb-8">
-            Get your favorite fashion items delivered in just 30 minutes. Bringing the fitting room to your doorstep.
+            Get your favorite fashion items delivered in just 30 minutes.
+            Bringing the fitting room to your doorstep.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -39,7 +42,7 @@ function HeroSection() {
           className="flex-1 flex justify-center"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 10 }}
         >
           <img
             src="/images/fashion.jpg"

@@ -20,7 +20,10 @@ function Register() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      <form className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md" onSubmit={handleSignup}>
+      <form
+        className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
+        onSubmit={handleSignup}
+      >
         <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
         <input
           type="email"
@@ -38,7 +41,10 @@ function Register() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" className="w-full bg-[#f3423a] text-white p-3 rounded hover:bg-[#e03d36]">
+        <button
+          type="submit"
+          className="w-full bg-[#f3423a] text-white p-3 rounded hover:bg-[#e03d36]"
+        >
           Register
         </button>
       </form>

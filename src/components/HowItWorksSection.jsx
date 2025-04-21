@@ -1,10 +1,22 @@
 import { motion } from 'framer-motion';
 
 const steps = [
-  { number: 1, title: 'Browse & Select', description: 'Choose your favorite items.' },
+  {
+    number: 1,
+    title: 'Browse & Select',
+    description: 'Choose your favorite items.',
+  },
   { number: 2, title: 'Place Order', description: 'Add to cart and checkout.' },
-  { number: 3, title: 'Quick Delivery', description: 'Items at your doorstep in 30 minutes.' },
-  { number: 4, title: 'Try & Keep', description: 'Only pay for what you love.' },
+  {
+    number: 3,
+    title: 'Quick Delivery',
+    description: 'Items at your doorstep in 30 minutes.',
+  },
+  {
+    number: 4,
+    title: 'Try & Keep',
+    description: 'Only pay for what you love.',
+  },
 ];
 
 function HowItWorksSection() {
@@ -13,7 +25,9 @@ function HowItWorksSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">How FlashFit Works</h2>
-          <p className="text-gray-600">Fashion delivered to your doorstep in just four simple steps.</p>
+          <p className="text-gray-600">
+            Fashion delivered to your doorstep in just four simple steps.
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-10">
