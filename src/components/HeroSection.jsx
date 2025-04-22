@@ -29,7 +29,7 @@ function HeroSection() {
               Join Waitlist
             </Link>
             <a
-              href="#Survey"
+              href="/Survey"
               className="border-2 border-[#f3423a] text-[#f3423a] px-6 py-3 rounded-full hover:bg-[#f3423a] hover:text-white transition"
             >
               Survey
